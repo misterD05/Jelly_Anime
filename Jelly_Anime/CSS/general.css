@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
+
+:root{
+    --ut-orange: #fb8b24ff;
+    --dogwood-rose: #d90368ff;
+    --byzantium: #820263ff;
+    --dark-purple: #291720ff;
+    --jade: #04a777ff;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+    font-family: Foldit;
+    font-weight: 400;
+    font-size: xx-large;
+}
+
+body{
+    height: auto;
+    width: auto;
+
+    background: linear-gradient(to bottom, var(--dark-purple), black);
+    z-index: 0;
+}
+
+
+#menuBar{
+    z-index: 1;
+    height: 150px;
+    width: 100%;
+    background: rgb(0,0,0,0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    box-shadow: 5px -5px 10px var(--dogwood-rose) inset, -5px 5px 10px var(--jade) inset;
+}
+
+a{
+    text-decoration: none;
+}
+
+.buttonPage{
+    height: auto;
+    width: auto;
+    margin: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#logo{
+}
+
+#content{
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
