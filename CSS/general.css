@@ -108,9 +108,10 @@ a{
     box-shadow: 5px -5px 10px var(--jade) inset;
 }
 
-#game:hover #drone{
+#menuBar:has(#game:hover) #drone{
     visibility: hidden;
 }
+
 
 #drone {
   display: block;
