@@ -10,13 +10,3 @@ container.on('mousemove', function(event) {
 });
 
 
-let visible = false;
-container.addEventListener("mouseover", function(){
-    if(!visible){
-        drone.style.visibility = "visible";
-        visible = !visible;
-    }else{
-        drone.style.visibility = "hidden";
-        visible = !visible;
-    }
-})
