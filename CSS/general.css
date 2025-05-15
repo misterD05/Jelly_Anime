@@ -35,7 +35,11 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
-    box-shadow: 5px -5px 10px var(--dogwood-rose) inset, -5px 5px 10px var(--dogwood-rose) inset;
+    box-shadow: 5px -5px 10px var(--dogwood-rose) inset;
+}
+
+#logo{
+    text-shadow: 5px -5px 10px var(--dogwood-rose);
 }
 
 a{
