@@ -57,6 +57,7 @@ a{
     margin: 10px;
     margin-left: 30px;
     text-align: center;
+    padding: 10px;
 }
 
 #content{
@@ -74,6 +75,18 @@ a{
 
 #menuBar:hover  #drone{
     visibility: visible;
+}
+
+#menuBar:hover #logo{
+    text-shadow: -2px 2px 5px var(--jade);
+}
+
+#menuBar:hover #game{
+    filter: drop-shadow(-2px 2px 5px var(--jade))
+}
+
+#menuBar:hover{
+    box-shadow: 5px -5px 10px var(--jade) inset;
 }
 
 #game:hover #drone{
