@@ -5,8 +5,8 @@ var droneCenter = {
   y: drone.offsetHeight / 2
 };
 
-container.on('mousemove', function(event) {
-  drone.css('transform', `translate3d(${event.offsetX - droneCenter.x}px, ${event.offsetY - droneCenter.y}px, 0)`);
+container.addEventListener("mousemove", function(event) {
+  drone.style.transform = `translate3d(${event.offsetX - droneCenter.x}px, ${event.offsetY - droneCenter.y}px, 0)`;
 });
 
 
