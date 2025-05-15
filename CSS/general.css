@@ -34,9 +34,8 @@ body{
     backdrop-filter: blur(10px);
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    align-content: center;
-    box-shadow: 5px -5px 10px var(--dogwood-rose) inset, -5px 5px 10px var(--jade) inset;
+    align-items: center;
+    box-shadow: 5px -5px 10px var(--dogwood-rose) inset, -5px 5px 10px var(--dogwood-rose) inset;
 }
 
 a{
