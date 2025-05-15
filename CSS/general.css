@@ -132,6 +132,6 @@ a{
 
 
 footer{
-    position: fixed;
+    position: absolute;
     top:100%;
 }
