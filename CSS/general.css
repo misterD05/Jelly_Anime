@@ -76,6 +76,10 @@ a{
     visibility: visible;
 }
 
+#game:hover #drone{
+    visibility: hidden;
+}
+
 #drone {
   display: block;
   position: absolute;
