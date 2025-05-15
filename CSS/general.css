@@ -35,8 +35,27 @@ body{
     align-items: center;
     box-shadow: 5px -5px 10px var(--dogwood-rose) inset;
     overflow-y: hidden;
-    overflow-x: scroll;
+    overflow-x: auto;
+    
 
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgba(var(--byzantium), 0.2);
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar-thum:hover{
+    background: rgba(var(--dogwood-rose), 0.2);
+}
+
+::-webkit-scrollbar-track{
+    opacity: 0%;
 }
 
 #logo{
