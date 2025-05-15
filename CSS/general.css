@@ -32,14 +32,16 @@ body{
     background: rgb(0,0,0,0.2);
     border-radius: 20px;
     backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: row;
     align-items: center;
     box-shadow: 5px -5px 10px var(--dogwood-rose) inset;
 }
 
 #logo{
     text-shadow: -2px 2px 5px var(--dogwood-rose);
+}
+
+#game{
+    filter: drop-shadow(-2px 2px 5px var(--dogwood-rose))
 }
 
 a{
@@ -58,4 +60,28 @@ a{
     height: 100%;
     width: 100%;
     z-index: 0;
+}
+
+.buttons{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+#drone {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-color: var(--jade);
+  filter: drop-shadow(10px 10px 15px var(--jade));
+  border-radius: 50%;
+  transition: transform 800ms ease-out;
+  will-change: transform;
+  pointer-events: none;
+  z-index: 0;
 }
