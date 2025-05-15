@@ -6,7 +6,7 @@ var droneCenter = {
 };
 
 container.addEventListener("mousemove", function(event) {
-  drone.style.transform = `translate3d(${(event.offsetX - droneCenter.x)/2}px, ${(event.offsetY - droneCenter.y)/2}px, 0)`;
+  drone.style.transform = `translate3d(${(event.offsetX - droneCenter.x)*2}px, ${(event.offsetY - droneCenter.y)*2}px, 0)`;
 });
 
 
