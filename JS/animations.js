@@ -1,8 +1,8 @@
 var container = document.getElementById('menuBar');
 var drone = document.getElementById('drone');
 var droneCenter = {
-  x: drone.width() / 2,
-  y: drone.height() / 2
+  x: drone.offsetWidth / 2,
+  y: drone.offsetHeight / 2
 };
 
 container.on('mousemove', function(event) {
