@@ -39,7 +39,7 @@ body{
 }
 
 #logo{
-    text-shadow: 5px -5px 10px var(--dogwood-rose);
+    text-shadow: -2px 2px 5px var(--dogwood-rose);
 }
 
 a{
