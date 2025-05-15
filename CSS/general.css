@@ -34,6 +34,9 @@ body{
     backdrop-filter: blur(10px);
     align-items: center;
     box-shadow: 5px -5px 10px var(--dogwood-rose) inset;
+    overflow-y: hidden;
+    overflow-x: scroll;
+
 }
 
 #logo{
