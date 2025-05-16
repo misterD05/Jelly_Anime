@@ -135,3 +135,40 @@ footer{
     position: absolute;
     top:100%;
 }
+
+
+#characters{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+#character{
+    width: 100px;
+    height: 40px;
+    align-content: center;
+    margin: 15px;
+    border-radius: 20px;
+}
+
+#profile{
+    z-index: 0;
+    width: 100px;
+    height: 40px;
+}
+
+#profile:hover #nameC{
+    visibility: visible;
+}
+
+#nameC{
+    z-index: 1;
+    width: 100px;
+    height: 40px;
+    visibility: hidden;
+    background-color: rgba(var(--ut-orange), 0.2);
+    text-align: center;
+}
