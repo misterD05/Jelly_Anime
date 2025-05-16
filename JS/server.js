@@ -4,8 +4,8 @@ let url = "https://api.jikan.moe/v4/characters";
 let response = fetch(url).then(function (response){return response.json()});
 
 
-for(let c of response.data){
-    console.log(c.name);
+for(let i = 0; i < response.data.length; i++){
+    console.log(response.data[i].name);
     
 }
 
