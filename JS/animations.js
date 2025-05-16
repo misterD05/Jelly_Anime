@@ -10,3 +10,4 @@ container.addEventListener("mousemove", function(event) {
 window.addEventListener('resize', function () {
     window.location.reload();
 });
+

@@ -160,6 +160,7 @@ footer{
     width: 175px;
     height: 250px;
     position: absolute;
+    border-radius: 20px;
     top: 0;
 }
 
@@ -171,10 +172,11 @@ footer{
     z-index: 1;
     width: 175px;
     height: 250px;
+    border-radius: 20px;
     visibility: hidden;
-    background-color: rgba(var(--ut-orange), 0.2);
-    display: flex;
-    align-content: flex-end;
+    background-color: (var(--ut-orange), 0.2);
+    text-align:center;
+    align-content:end;
     position: absolute;
     top: 0;
 }
