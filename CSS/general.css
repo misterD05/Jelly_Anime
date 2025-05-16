@@ -147,17 +147,20 @@ footer{
 
 
 .character{
-    width: 150px;
-    height: 450px;
+    width: 175px;
+    height: 250px;
     align-content: center;
     margin: 15px;
     border-radius: 20px;
+    position: relative;
 }
 
 #profile{
     z-index: 0;
-    width: 150px;
-    height: 450px;
+    width: 175px;
+    height: 250px;
+    position: absolute;
+    top: 0;
 }
 
 .character:hover #nameC{
@@ -166,9 +169,12 @@ footer{
 
 #nameC{
     z-index: 1;
-    width: 150px;
-    height: 450px;
+    width: 175px;
+    height: 250px;
     visibility: hidden;
     background-color: rgba(var(--ut-orange), 0.2);
-    text-align: center;
+    display: flex;
+    align-content: flex-end;
+    position: absolute;
+    top: 0;
 }
