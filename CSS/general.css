@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Foldit:wght@100..900&display=swap');
 
 :root{
-    --ut-orange: #fb8b24ff;
+    --ut-orange: #fb8b2464;
     --dogwood-rose: #d90368ff;
     --byzantium: #820263ff;
     --dark-purple: #291720ff;
@@ -155,7 +155,7 @@ footer{
     position: relative;
 }
 
-#profile{
+.profile{
     z-index: 0;
     width: 175px;
     height: 250px;
@@ -164,17 +164,17 @@ footer{
     top: 0;
 }
 
-.character:hover #nameC{
+.character:hover .nameC{
     visibility: visible;
 }
 
-#nameC{
+.nameC{
     z-index: 1;
     width: 175px;
     height: 250px;
     border-radius: 20px;
     visibility: hidden;
-    background-color: (var(--ut-orange), 0.2);
+    background-color: var(--ut-orange);
     text-align:center;
     align-content:end;
     position: absolute;
