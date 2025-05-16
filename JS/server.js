@@ -1,18 +1,8 @@
 let charactersContainer = document.getElementById('characters');
 let url = "https://api.jikan.moe/v4/characters";
 
-let response = fetch(url).then(function (response){return response.json()});
+let response = fetch(url).then(response => response.json()).then(data => console.log(data));
 
-
-
-let obj = eval('(' + response + ')');
-
-let data = [];
-
-for (let i in obj)
-    data.push(obj[i].json());
-
-console.log(res);
 
 for(let i = 0; i < data.length; i++){
     console.log(response.data[i].name);
