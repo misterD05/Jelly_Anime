@@ -146,9 +146,9 @@ footer{
 }
 
 
-#character{
-    width: 100px;
-    height: 40px;
+.character{
+    width: 150px;
+    height: 450px;
     align-content: center;
     margin: 15px;
     border-radius: 20px;
@@ -156,18 +156,18 @@ footer{
 
 #profile{
     z-index: 0;
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 450px;
 }
 
-#profile:hover #nameC{
+.character:hover #nameC{
     visibility: visible;
 }
 
 #nameC{
     z-index: 1;
-    width: 100px;
-    height: 40px;
+    width: 150px;
+    height: 450px;
     visibility: hidden;
     background-color: rgba(var(--ut-orange), 0.2);
     text-align: center;
