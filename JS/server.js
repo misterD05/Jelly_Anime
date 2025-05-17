@@ -21,12 +21,10 @@ async function forPages(){
         const numPages = data.pagination.last_visible_page;
         console.log(numPages)
         for(let i = 1; i < numPages + 1; i++){
-            let urlnew = url + numPages;
+            let urlnew = url + i;
             console.log(urlnew);
             
-            setTimeout(() => {
-                getCharacters(urlnew);     
-            }, 1000);
+            setTimeout(getCharacters(urlnew), 2000);
         }
     }).catch(error => console.error('Error:', error));
 }
