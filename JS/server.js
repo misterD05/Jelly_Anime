@@ -17,7 +17,7 @@ async function getCharacters(urlM) {
 }
 
 let myPoint = 1;
-const numPages = 0;
+let numPages = 0;
 
 async function forPages(){
     let response = await fetch(url).then(response => response.json()).then(data => {numPages = data.pagination.last_visible_page;}).catch(error => console.error('Error:', error));
