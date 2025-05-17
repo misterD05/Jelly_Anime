@@ -30,6 +30,10 @@ async function getRandomCharacter() {
     newGame.style.visibility = "hidden";
     forNumC()
     character = getRandomInt(1, numCharacters);
+    console.log(numCharacters);
+    console.log(character);
+
+    
     getCharacter(url + "/" + character);
     
 }
