@@ -24,7 +24,9 @@ async function forPages(){
             let urlnew = url + numPages;
             console.log(urlnew);
             
-            getCharacters(urlnew);
+            setTimeout(() => {
+                getCharacters(urlnew);     
+            }, 200);
         }
     }).catch(error => console.error('Error:', error));
 }
