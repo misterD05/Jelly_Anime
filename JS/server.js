@@ -18,7 +18,9 @@ async function getCharacters(urlM) {
 
 async function forPages(){
     let response = await fetch(url).then(response => response.json()).then(data => {
-        let numPages = data.pagination.total_pages;
+        const totalResults = data.pagination.total;
+        const limit = data.pagination.limits;
+        const numPages = Math.ceil(totalResults / limit);
         console.log(numPages)
         for(let i = 0; i < numPages; i++){
             let urlnew = url + numPages;
