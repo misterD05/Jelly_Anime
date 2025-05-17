@@ -17,7 +17,7 @@ async function getCharacter(urlM) {
     const character = data.data;
     
         guess = new Character(character.name, character.name_kanji, character.about, character.images)
-        imgGuess.src(character.images.jpg.image_url);
+        imgGuess.src = character.images.jpg.image_url;
     }).catch(error => console.error('Error:', error));
 
 
