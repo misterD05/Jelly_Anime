@@ -1,8 +1,8 @@
 let charactersContainer = document.getElementById('characters');
-let url = "https://api.jikan.moe/v4/characters";
+let url = "https://api.jikan.moe/v4/characters?page=";
 
-async function getCharacters() {
-    let response = await fetch(url).then(response => response.json()).then(data => {
+async function getCharacters(urlM) {
+    let response = await fetch(urlM).then(response => response.json()).then(data => {
     const characters = data.data;
     characters.forEach(character => {
         let imageUrl = character.images;
@@ -16,6 +16,16 @@ async function getCharacters() {
 
 }
 
-getCharacters();
+async function forPages(){
+    let response = await fetch(url).then(response => response.json()).then(data => {
+        let numPages = data.meta.pagination.total_pages;
+        for(let i = 0; i < numPages; i++){
+            let urlnew = url + numPages;
+            getCharacters(urlnew);
+        }
+    }).catch(error => console.error('Error:', error));
+}
+
+forPages();
 
 let strut = "<div class=></div>"
