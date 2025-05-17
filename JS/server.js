@@ -11,7 +11,7 @@ async function getCharacters() {
       let imageUrl = item.images;
       let struct = document.createElement("div");
       struct.className = 'character';
-      struct.innerHTML = "<img class='profile' src=" + imageUrl.jpg.image_url + " alt=''><div class='nameC'>" + character.name "</div>"
+      struct.innerHTML = "<img class='profile' src=" + imageUrl.jpg.image_url + " alt=''><div class='nameC'>" + character.name + "</div>"
       charactersContainer.appendChild(struct)  
     })
 
