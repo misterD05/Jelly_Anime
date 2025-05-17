@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anta&display=swap');
 
 :root{
-    --ut-orange: #82026364;
+    --ut-orange: #8202629a;
     --dogwood-rose: #d90368ff;
     --byzantium: #820263ff;
     --dark-purple: #291720ff;
-    --jade: #04a777ff;
+    --jade: rgb(6, 196, 139);
 }
 
 html{
