@@ -16,22 +16,26 @@ async function getCharacters(urlM) {
 
 }
 
+let myPoint = 1;
+const numPages = 0;
+
 async function forPages(){
-    let response = await fetch(url).then(response => response.json()).then(data => {
-        const numPages = data.pagination.last_visible_page;
-        console.log(numPages)
-        for(let i = 1; i < numPages + 1; i++){
-            let urlnew = url + i;
-            console.log(urlnew);
-            
-            setTimeout(function(){
-                console.log("time for not requesting")
-            }, 2000);
-            getCharacters(urlnew);
-        }
-    }).catch(error => console.error('Error:', error));
+    let response = await fetch(url).then(response => response.json()).then(data => {numPages = data.pagination.last_visible_page;}).catch(error => console.error('Error:', error));
 }
 
 forPages();
+getCharacters(url + myPoint);
+
+let buttonCharacters = document.getElementById("moreCharacters");
+
+buttonCharacters.addEventListener("onclick", function(){
+    if(myPoint == numPages){
+        buttonCharacters.innerHTML = "No More";
+    }else{
+        myPoint++;
+        let newurl = url + myPoint;
+        getCharacters(newurl);
+    }
+});
 
 let strut = "<div class=></div>"
