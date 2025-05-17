@@ -3,7 +3,7 @@ function getRandomInt(min, max) {
 }
 
 let guess;
-let url = "https://api.jikan.moe/v4/characters/";
+let url = "https://api.jikan.moe/v4/characters";
 
 let numCharacters = 0;
 
@@ -30,7 +30,7 @@ async function getRandomCharacter() {
     newGame.style.visibility = "hidden";
     forNumC()
     character = getRandomInt(1, numCharacters);
-    getCharacter(url + character);
+    getCharacter(url + "/" + character);
     
 }
 
