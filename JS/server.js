@@ -12,4 +12,6 @@ async function getCharacters() {
     }
 }
 
+getCharacters();
+
 let strut = "<div class='character'><img class='profile' src='' alt=''><div class='nameC'>Name</div></div>"
