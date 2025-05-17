@@ -24,7 +24,10 @@ async function forPages(){
             let urlnew = url + i;
             console.log(urlnew);
             
-            setTimeout(getCharacters(urlnew), 2000);
+            setTimeout(function(){
+                console.log("time for not requesting")
+            }, 2000);
+            getCharacters(urlnew);
         }
     }).catch(error => console.error('Error:', error));
 }
