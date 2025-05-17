@@ -32,8 +32,6 @@ async function getRandomCharacter() {
     imgGuess.src(guess.images.jpg.image_url);
 }
 
-let answer;
-
 let imgGuess = document.getElementById("imgToGuess");
 let description = document.getElementById("description");
 let answer = document.getElementById("nameTry");
