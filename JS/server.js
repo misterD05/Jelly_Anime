@@ -4,9 +4,9 @@ let url = "https://api.jikan.moe/v4/characters";
 async function getCharacters() {
     let response = await fetch(url).then(response => response.json()).then(function (data){return data.json});
 
-    console.log(response.data)
+    console.log(response)
 
-    for(let item  of response.data){
+    for(let item  of response){
       let character = item;
       let imageUrl = item.images;
       let struct = document.createElement("div");
