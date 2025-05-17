@@ -4,7 +4,7 @@ let url = "https://api.jikan.moe/v4/characters";
 async function getCharacters() {
     let response = await fetch(url).then(response => response.json()).then(data => console.log(data));
 
-    console.log(response)
+    console.log(response.pagination.last_visible_page)
 
 }
 
