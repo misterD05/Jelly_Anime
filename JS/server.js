@@ -21,6 +21,8 @@ async function forPages(){
         let numPages = data.pagination.total_pages;
         for(let i = 0; i < numPages; i++){
             let urlnew = url + numPages;
+            console.log(urlnew);
+            
             getCharacters(urlnew);
         }
     }).catch(error => console.error('Error:', error));
