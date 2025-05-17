@@ -26,6 +26,8 @@ async function getCharacter(urlM) {
 
 
 async function getRandomCharacter() {
+    description.style.visibility = "hidden";
+    newGame.style.visibility = "hidden";
     forNumC()
     character = getRandomInt(1, numCharacters);
     getCharacter(url + character);
