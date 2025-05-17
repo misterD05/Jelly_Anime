@@ -185,4 +185,36 @@ a{
     padding: 10px;
     background: var(--byzantium);
     border-radius: 20px;
+    border: none;
+}
+
+#toGuess{
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgToGuess{
+    width: 350px;
+    height: 500px;
+    margin: 10px;
+}
+
+#nameTry{
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    font-size: larger;
+    background: black;
+    color: var(--byzantium);
+}
+
+#description{
+    height: auto;
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    /*visibility: hidden;*/
 }

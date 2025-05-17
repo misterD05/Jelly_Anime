@@ -11,7 +11,7 @@ async function forNumC(){
     let response = await fetch(url).then(response => response.json()).then(data => {numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
 }
 
-async function getCharacters(urlM) {
+async function getCharacter(urlM) {
     let response = await fetch(urlM).then(response => response.json()).then(data => {
     
     const character = data.data;
@@ -28,7 +28,7 @@ async function getCharacters(urlM) {
 async function getRandomCharacter() {
     forNumC()
     character = getRandomInt(1, numCharacters);
-    getCharacters(url + character);
+    getCharacter(url + character);
 }
 
 let answer;
