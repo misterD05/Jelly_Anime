@@ -20,13 +20,13 @@ async function forPages(){
     let response = await fetch(url).then(response => response.json()).then(data => {
         const numPages = data.pagination.last_visible_page;
         console.log(numPages)
-        for(let i = 0; i < numPages; i++){
+        for(let i = 1; i < numPages + 1; i++){
             let urlnew = url + numPages;
             console.log(urlnew);
             
             setTimeout(() => {
                 getCharacters(urlnew);     
-            }, 200);
+            }, 1000);
         }
     }).catch(error => console.error('Error:', error));
 }
