@@ -11,7 +11,7 @@ async function getCharacters() {
         struct.innerHTML = "<img class='profile' src=" + imageUrl.jpg.image_url + " alt=''><div class='nameC'>" + character.name + "</div>"
         charactersContainer.appendChild(struct)  
     });
-  })
+  }).catch(error => console.error('Error:', error));
 
 
 }
