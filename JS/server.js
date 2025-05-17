@@ -28,7 +28,7 @@ getCharacters(url + myPoint);
 
 let buttonCharacters = document.getElementById("moreCharacters");
 
-buttonCharacters.addEventListener("onclick", function(){
+buttonCharacters.addEventListener("click", function(){
     if(myPoint == numPages){
         buttonCharacters.innerHTML = "No More";
     }else{
