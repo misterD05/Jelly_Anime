@@ -16,7 +16,7 @@ async function getCharacter(urlM) {
     
     const character = data.data;
     
-        guess = new Character(character.name, character.name_kanji, character.about)
+        guess = new Character(character.name, character.name_kanji, character.about, character.images)
 
     }).catch(error => console.error('Error:', error));
 
@@ -29,17 +29,39 @@ async function getRandomCharacter() {
     forNumC()
     character = getRandomInt(1, numCharacters);
     getCharacter(url + character);
+    imgGuess.src(guess.images.jpg.image_url);
 }
 
 let answer;
 
+let imgGuess = document.getElementById("imgToGuess");
+let description = document.getElementById("description");
+let answer = document.getElementById("nameTry");
 
+document.addEventListener("keydown", function(event){
+    if(event.keycode == 13){
+        if(nameTry.value == guess.name){
+            description.innerHTML += guess.nam + "\n" +guess.name_kanji + "\n" + guess.nicknames + "\n" + guess.about;
+            description.style.visibility = "visible";
+            newGame.style.visibility = "visible";
+        }
+    }
+})
+
+
+let newGame = document.getElementById("newGame");
+newGame.addEventListener("click", function(){
+    getRandomCharacter();
+})
 
 class Character{
-    constructor(name, name_kanji, nicknames, about){
+    constructor(name, name_kanji, nicknames, about, images){
         this.name = name;
         this.name_kanji = name_kanji;
         this.nicknames = nicknames;
         this.about = about;
+        this.images = images;
     }
 }
+
+getRandomCharacter()

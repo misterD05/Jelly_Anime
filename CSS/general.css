@@ -200,6 +200,7 @@ a{
     width: 350px;
     height: 500px;
     margin: 10px;
+    border-radius: 20px;
 }
 
 #nameTry{
@@ -209,6 +210,8 @@ a{
     font-size: larger;
     background: black;
     color: var(--byzantium);
+    border: none;
+    border-radius: 20px;
 }
 
 #description{
@@ -216,5 +219,16 @@ a{
     width: 50%;
     padding: 15px;
     margin: 10px;
-    /*visibility: hidden;*/
+    margin-bottom: 100px;
+    visibility: hidden;
+}
+
+#newGame{
+    visibility: hidden;
+    width: 50%;
+    height: auto;
+    padding: 10px;
+    background: var(--byzantium);
+    border-radius: 20px;
+    border: none;
 }
