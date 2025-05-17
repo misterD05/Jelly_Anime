@@ -8,7 +8,7 @@ let url = "https://api.jikan.moe/v4/characters";
 let numCharacters = 0;
 
 async function forNumC(){
-    let response = await fetch(url).then(response => response.json()).then(data => {numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
+    let response = await fetch(url).then(response => response.json()).then(data => {console.log(data.pagination); console.log(data.pagination.items) numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
 }
 
 async function getCharacter(urlM) {
