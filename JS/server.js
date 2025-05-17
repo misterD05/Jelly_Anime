@@ -6,8 +6,17 @@ async function getCharacters() {
 
     console.log(response.data)
 
+    response.data.forEach(item => {
+      let character = item;
+      let imageUrl = item.images;
+      let struct = document.createElement("div");
+      struct.className = 'character';
+      struct.innerHTML = "<img class='profile' src=" + imageUrl.jpg.image_url + " alt=''><div class='nameC'>" + character.name "</div>"
+      charactersContainer.appendChild(struct)  
+    })
+
 }
 
 getCharacters();
 
-let strut = "<div class='character'><img class='profile' src='' alt=''><div class='nameC'>Name</div></div>"
+let strut = "<div class=></div>"
