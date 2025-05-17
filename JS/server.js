@@ -4,12 +4,8 @@ let url = "https://api.jikan.moe/v4/characters";
 async function getCharacters() {
     let response = await fetch(url).then(response => response.json()).then(data => console.log(data));
 
-    console.log(response.data)
+    console.log(response)
 
-    for(let i = 0; i < response.data.length; i++){
-        console.log("data " + i + " " + response.data[i].name);
-
-    }
 }
 
 getCharacters();
