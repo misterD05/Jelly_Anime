@@ -28,8 +28,7 @@ mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
         for(let i = 0; i < element.length; i++){
           let el = getCoords(element[i]);
-          console.log(e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom);
-          if (e.clientX >= element[i].left && e.clientX <= element[i].right && e.clientY >= element[i].top && e.clientY <= element[i].bottom){
+          if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
             transformElement(e.clientX, e.clientY, i);
           }
         }
