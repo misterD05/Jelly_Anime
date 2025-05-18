@@ -1,5 +1,6 @@
 let guess;
 let url = "https://api.jikan.moe/v4/characters";
+let urlRandom = "https://api.jikan.moe/v4/random/characters";
 let numCharacters = 0;
 
 
@@ -7,13 +8,7 @@ function getRandomCharacter() {
     description.style.visibility = "hidden";
     newGame.style.visibility = "hidden";
     forNumC();
-
-    character = getRandomInt(1, numCharacters);
-    console.log(numCharacters);
-    console.log(character);
-
-    
-    getCharacter(url + "/" + character);
+    getCharacter(urlRandom);
     
 }
 
@@ -39,14 +34,7 @@ newGame.addEventListener("click", function(){
 
 
 
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
-
-async function forNumC(){
-    let response = await fetch(url).then(response => response.json()).then(data => {numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
-}
 
 async function getCharacter(urlM) {
     let response = await fetch(urlM).then(response => response.json()).then(data => {
