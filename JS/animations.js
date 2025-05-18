@@ -26,6 +26,8 @@ function transformElement(x, y) {
 
 mouseOverContainer.addEventListener("mouseover", (e)=>{
   window.requestAnimationFrame(function(){
+    console.log(e.clientX);
+    console.log(e.clientY);
     transformElement(e.clientX, e.clientY);
   });
 });
