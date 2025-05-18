@@ -30,6 +30,8 @@ mouseOverContainer.addEventListener("mousemove", (e) => {
           let el = getCoords(element[i]);
           if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
             transformElement(e.clientX, e.clientY, i);
+          }else{
+            element[i].style.transform = "rotateX(0) rotateY(0)";
           }
         }
     });
@@ -43,6 +45,41 @@ mouseOverContainer.addEventListener("mouseleave", (e) => {
       }
     });
 });
+
+
+
+
+
+const multiple2 = 10;
+const mouseOverContainer2 = document.getElementById("toGuess");
+const element2 = document.getElementById("imgToGuess");
+
+function transformElement2(x, y) {
+    let box = element2.getBoundingClientRect();
+    const calcX = -(y - box.y - box.height / 2) / multiple2;
+    const calcY = (x - box.x - box.width / 2) / multiple2;
+    const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
+    element2.style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
+}
+
+mouseOverContainer2.addEventListener("mousemove", (e) => {
+    window.requestAnimationFrame(function () {
+        let el = getCoords(element2);
+        if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
+          transformElement2(e.clientX, e.clientY);
+        }else{
+          element2.style.transform = "rotateX(0) rotateY(0)";
+        }
+    });
+});
+
+mouseOverContainer2.addEventListener("mouseleave", (e) => {
+    window.requestAnimationFrame(function () {
+      element2.style.transform = "rotateX(0) rotateY(0)";
+    });
+});
+
+
 
 
 
