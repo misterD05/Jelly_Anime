@@ -23,30 +23,32 @@ function transformElement(x, y,i) {
     const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
     element[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
-
-mouseOverContainer.addEventListener("mousemove", (e) => {
-    window.requestAnimationFrame(function () {
-        for(let i = 0; i < element.length; i++){
-          let el = getCoords(element[i]);
-          if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
-            transformElement(e.clientX, e.clientY, i);
-          }else{
-            element[i].style.transform = "rotateX(0) rotateY(0)";
+if(mouseOverContainer != null) {
+  
+  mouseOverContainer.addEventListener("mousemove", (e) => {
+      window.requestAnimationFrame(function () {
+          for(let i = 0; i < element.length; i++){
+            let el = getCoords(element[i]);
+            if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
+              transformElement(e.clientX, e.clientY, i);
+            }else{
+              element[i].style.transform = "rotateX(0) rotateY(0)";
+            }
           }
+      });
+  });
+
+  mouseOverContainer.addEventListener("mouseleave", (e) => {
+      window.requestAnimationFrame(function () {
+        for(let i = 0; i < element.length; i++){
+            element[i].style.transform = "rotateX(0) rotateY(0)";
+
         }
-    });
-});
-
-mouseOverContainer.addEventListener("mouseleave", (e) => {
-    window.requestAnimationFrame(function () {
-      for(let i = 0; i < element.length; i++){
-          element[i].style.transform = "rotateX(0) rotateY(0)";
-          
-      }
-    });
-});
+      });
+  });
 
 
+}
 
 
 
@@ -61,24 +63,26 @@ function transformElement2(x, y) {
     const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
     element2.style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
-
-mouseOverContainer2.addEventListener("mousemove", (e) => {
-    window.requestAnimationFrame(function () {
-        let el = getCoords(element2);
-        if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
-          transformElement2(e.clientX, e.clientY);
-        }else{
-          element2.style.transform = "rotateX(0) rotateY(0)";
-        }
-    });
-});
-
-mouseOverContainer2.addEventListener("mouseleave", (e) => {
-    window.requestAnimationFrame(function () {
-      element2.style.transform = "rotateX(0) rotateY(0)";
-    });
-});
-
+if(mouseOverContainer2 != null){
+  
+  mouseOverContainer2.addEventListener("mousemove", (e) => {
+      window.requestAnimationFrame(function () {
+          let el = getCoords(element2);
+          if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
+            transformElement2(e.clientX, e.clientY);
+          }else{
+            element2.style.transform = "rotateX(0) rotateY(0)";
+          }
+      });
+  });
+  
+  mouseOverContainer2.addEventListener("mouseleave", (e) => {
+      window.requestAnimationFrame(function () {
+        element2.style.transform = "rotateX(0) rotateY(0)";
+      });
+  });
+  
+}
 
 
 
