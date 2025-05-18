@@ -43,10 +43,9 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 async function forNumC(){
-    let response = await fetch(url).then(response => response.json()).then(data => { numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
-    numCharacters = numCharacters.then(value => {return value;});
-    return numCharacters
+    let response = await fetch(url).then(response => response.json()).then(data => {numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
 }
 
 async function getCharacter(urlM) {
