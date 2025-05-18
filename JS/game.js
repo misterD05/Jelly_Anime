@@ -6,7 +6,7 @@ let numCharacters;
 function getRandomCharacter() {
     description.style.visibility = "hidden";
     newGame.style.visibility = "hidden";
-    numCharacters = forNumC();
+    forNumC();
 
     character = getRandomInt(1, numCharacters);
     console.log(numCharacters);
