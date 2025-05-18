@@ -7,7 +7,8 @@ function getRandomCharacter() {
     description.style.visibility = "hidden";
     newGame.style.visibility = "hidden";
     numCharacters = forNumC();
-    character = getRandomInt(1, numCharacters.then(value => {return value;}));
+
+    character = getRandomInt(1, numCharacters);
     console.log(numCharacters);
     console.log(character);
 
@@ -44,7 +45,8 @@ function getRandomInt(min, max) {
 
 async function forNumC(){
     let response = await fetch(url).then(response => response.json()).then(data => { numCharacters = data.pagination.items.total;}).catch(error => console.error('Error:', error));
-    return numCharacters;
+    numCharacters = numCharacters.then(value => {return value;});
+    return numCharacters
 }
 
 async function getCharacter(urlM) {
