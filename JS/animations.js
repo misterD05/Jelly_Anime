@@ -27,7 +27,8 @@ function transformElement(x, y,i) {
 mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
         for(let i = 0; i < element.length; i++){
-          console.log(e.clientX >= element[i].left && e.clientX <= element[i].right && e.clientY >= element[i].top && e.clientY <= element[i].bottom);
+          let el = getCoords(element[i]);
+          console.log(e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom);
           if (e.clientX >= element[i].left && e.clientX <= element[i].right && e.clientY >= element[i].top && e.clientY <= element[i].bottom){
             transformElement(e.clientX, e.clientY, i);
           }
@@ -43,3 +44,15 @@ mouseOverContainer.addEventListener("mouseleave", (e) => {
       }
     });
 });
+
+
+
+function getCoords(elem) {
+    let box = elem.getBoundingClientRect();
+    return {
+        top: box.top + window.pageYOffset,
+        right: box.right + window.pageXOffset,
+        bottom: box.bottom + window.pageYOffset,
+        left: box.left + window.pageXOffset
+    };
+}
