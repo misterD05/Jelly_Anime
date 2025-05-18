@@ -24,7 +24,7 @@ function transformElement(x, y,i) {
     element[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
 
-mouseOverContainer.addEventListener("mouseenter", (e) => {
+mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
         for(let i = 0; i < element.length; i++){
           transformElement(e.clientX, e.clientY, i);
