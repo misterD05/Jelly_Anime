@@ -25,7 +25,7 @@ function transformElement(x, y, i) {
 }
 
 for(let i = 0; i < mouseOverContainer.length ; i++){
-  mouseOverContainer[i].addEventListener('mouseover', (e)=>{
+  mouseOverContainer[i].addEventListener('mouseenter', (e)=>{
     window.requestAnimationFrame(function(){
       console.log(e.clientX);
       console.log(e.clientY);
