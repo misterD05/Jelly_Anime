@@ -1,6 +1,6 @@
 let guess;
 let url = "https://api.jikan.moe/v4/characters";
-let numCharacters;
+let numCharacters = 0;
 
 
 function getRandomCharacter() {
