@@ -19,7 +19,7 @@ let answer = document.getElementById("nameTry");
 document.addEventListener("keydown", function(event){
     if(event.key === 'Enter'){
         if(nameTry.value == guess.name){
-            description.innerHTML = "<summary id="butSum">Description</summary>" +  guess.name + "\n" +guess.name_kanji + "\n" + guess.nicknames + "\n" + guess.about;
+            description.innerHTML = "<summary id='butSum'>Description</summary>" +  guess.name + "<br>" +guess.name_kanji + "<br>" + guess.nicknames + "<br>" + guess.about;
             description.style.visibility = "visible";
             newGame.style.visibility = "visible";
         }
