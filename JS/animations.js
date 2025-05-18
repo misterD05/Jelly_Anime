@@ -17,11 +17,11 @@ const mouseOverContainer = document.getElementsByClassName("character");
 const element = document.getElementsByClassName("profile");
 
 function transformElement(x, y,i) {
-    let box = mouseOverContainer[i].getBoundingClientRect();
+    let box = element[i].getBoundingClientRect();
     const calcX = -(y - box.y - box.height / 2) / multiple;
     const calcY = (x - box.x - box.width / 2) / multiple;
     const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
-    mouseOverContainer[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
+    element[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
 
 
@@ -43,7 +43,7 @@ for(let i = 0; i < element.length; i++){
 for(let i = 0; i < element.length; i++){
   mouseOverContainer[i].addEventListener("mouseleave", (e) => {
   window.requestAnimationFrame(function () {
-        mouseOverContainer[i].style.transform = "rotateX(0) rotateY(0)";
+        element[i].style.transform = "rotateX(0) rotateY(0)";
   });
   } );
 
