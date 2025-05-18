@@ -7,7 +7,6 @@ let numCharacters = 0;
 function getRandomCharacter() {
     description.style.visibility = "hidden";
     newGame.style.visibility = "hidden";
-    forNumC();
     getCharacter(urlRandom);
     
 }
