@@ -29,6 +29,7 @@ if(mouseOverContainer != null) {
       window.requestAnimationFrame(function () {
           for(let i = 0; i < element.length; i++){
             let el = getCoords(element[i]);
+            console.log(e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom);
             if (e.clientX >= el.left && e.clientX <= el.right && e.clientY >= el.top && e.clientY <= el.bottom){
               transformElement(e.clientX, e.clientY, i);
             }else{
@@ -75,13 +76,13 @@ if(mouseOverContainer2 != null){
           }
       });
   });
-  
+
   mouseOverContainer2.addEventListener("mouseleave", (e) => {
       window.requestAnimationFrame(function () {
         element2.style.transform = "rotateX(0) rotateY(0)";
       });
   });
-  
+
 }
 
 
