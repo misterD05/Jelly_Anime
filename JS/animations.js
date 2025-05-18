@@ -13,10 +13,10 @@ window.addEventListener('resize', function () {
 
 
 const multiple = 10;
-const mouseOverContainer = document.getElementsByClassName("character");
-const element = document.getElementsByClassName("profile");
+const mouseOverContainer = document.getElementById("characters");
+const element = document.getElementsByClassName("character");
 
-function transformElement(x, y, i) {
+function transformElement(x, y,i) {
     let box = element[i].getBoundingClientRect();
     const calcX = -(y - box.y - box.height / 2) / multiple;
     const calcY = (x - box.x - box.width / 2) / multiple;
@@ -24,25 +24,19 @@ function transformElement(x, y, i) {
     element[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
 
-for(let i = 0; i < mouseOverContainer.length ; i++){
-  mouseOverContainer[i].addEventListener('mouseenter', (e)=>{
-    console.log("entered")
-    window.requestAnimationFrame(function(){
-      console.log(e.clientX);
-      console.log(e.clientY);
-      transformElement(e.clientX, e.clientY, i);
-    });
-  });
-
-
-
-
-
-
-  mouseOverContainer[i].addEventListener('mouseleave', (e) => {
+mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
-          mouseOverContainer[i].style.transform = "rotateX(0) rotateY(0)";
+        for(let i = 0; i < element.length; i++){
+          transformElement(e.clientX, e.clientY, i);
+        }
     });
-  } );
+});
 
-}
+mouseOverContainer.addEventListener("mouseleave", (e) => {
+    window.requestAnimationFrame(function () {
+      for(let i = 0; i < element.length; i++){
+          element[i].style.transform = "rotateX(0) rotateY(0)";
+          
+      }
+    });
+});
