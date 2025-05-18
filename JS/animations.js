@@ -93,7 +93,7 @@ function getCoords(elem) {
     let box = elem.getBoundingClientRect();
     return {
         top: box.top,
-        right: box.right
+        right: box.right,
         bottom: box.bottom,
         left: box.left
     };
