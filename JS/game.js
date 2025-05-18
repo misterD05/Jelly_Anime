@@ -7,6 +7,7 @@ let numCharacters = 0;
 function getRandomCharacter() {
     description.style.visibility = "hidden";
     newGame.style.visibility = "hidden";
+    answer.value = "";
     getCharacter(urlRandom);
     
 }
@@ -18,7 +19,7 @@ let answer = document.getElementById("nameTry");
 document.addEventListener("keydown", function(event){
     if(event.key === 'Enter'){
         if(nameTry.value == guess.name){
-            description.innerHTML += guess.nam + "\n" +guess.name_kanji + "\n" + guess.nicknames + "\n" + guess.about;
+            description.innerHTML = "<summary id="butSum">Description</summary>" +  guess.name + "\n" +guess.name_kanji + "\n" + guess.nicknames + "\n" + guess.about;
             description.style.visibility = "visible";
             newGame.style.visibility = "visible";
         }

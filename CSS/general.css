@@ -216,11 +216,12 @@ a{
 
 #description{
     height: auto;
-    width: 50%;
+    width: 60%;
     padding: 15px;
     margin: 10px;
     margin-bottom: 100px;
     visibility: hidden;
+    font-size: medium;
 }
 
 #newGame{
