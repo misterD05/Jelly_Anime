@@ -27,7 +27,9 @@ function transformElement(x, y,i) {
 mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
         for(let i = 0; i < element.length; i++){
-          transformElement(e.clientX, e.clientY, i);
+          if (event.clientX >= element[i].left && event.clientX <= element[i].right && event.clientY >= element[i].top && event.clientY <= element[i].bottom){
+            transformElement(e.clientX, e.clientY, i);
+          }
         }
     });
 });
