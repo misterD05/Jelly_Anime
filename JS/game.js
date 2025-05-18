@@ -42,6 +42,7 @@ async function getCharacter(urlM) {
     
         guess = new Character(character.name, character.name_kanji, character.about, character.images)
         imgGuess.src = character.images.jpg.image_url;
+        console.log(guess.name);
     }).catch(error => console.error('Error:', error));
 
 }
