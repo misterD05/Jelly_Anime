@@ -27,6 +27,7 @@ function transformElement(x, y,i) {
 mouseOverContainer.addEventListener("mousemove", (e) => {
     window.requestAnimationFrame(function () {
         for(let i = 0; i < element.length; i++){
+          console.log(e.clientX >= element[i].left && e.clientX <= element[i].right && e.clientY >= element[i].top && e.clientY <= element[i].bottom);
           if (e.clientX >= element[i].left && e.clientX <= element[i].right && e.clientY >= element[i].top && e.clientY <= element[i].bottom){
             transformElement(e.clientX, e.clientY, i);
           }
