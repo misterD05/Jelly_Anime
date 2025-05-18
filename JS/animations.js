@@ -16,35 +16,28 @@ const multiple = 10;
 const mouseOverContainer = document.getElementsByClassName("character");
 const element = document.getElementsByClassName("profile");
 
-function transformElement(x, y,i) {
-    let box = element[i].getBoundingClientRect();
+function transformElement(x, y) {
+    let box = element.getBoundingClientRect();
     const calcX = -(y - box.y - box.height / 2) / multiple;
     const calcY = (x - box.x - box.width / 2) / multiple;
     const percentage = parseInt((x - box.x) / box.width * 1000) / 10;
-    element[i].style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
+    element.style.transform = "rotateX(" + calcX + "deg) rotateY(" + calcY + "deg)";
 }
 
+mouseOverContainer.addEventListener("mouseover", (e)=>{
+  window.requestAnimationFrame(function(){
+    transformElement(e.clientX, e.clientY);
+  });
+});
 
 
 
-for(let i = 0; i < element.length; i++){
-  mouseOverContainer[i].addEventListener("mousemove", (e) => {
+
+
+
+mouseOverContainer.addEventListener("mouseleave", (e) => {
   window.requestAnimationFrame(function () {
-      
-      transformElement(e.clientX, e.clientY, i);
-      
+        mouseOverContainer.style.transform = "rotateX(0) rotateY(0)";
   });
-  });
-}
+} );
 
-
-
-
-for(let i = 0; i < element.length; i++){
-  mouseOverContainer[i].addEventListener("mouseleave", (e) => {
-  window.requestAnimationFrame(function () {
-        element[i].style.transform = "rotateX(0) rotateY(0)";
-  });
-  } );
-
-}
