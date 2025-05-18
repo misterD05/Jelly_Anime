@@ -25,7 +25,7 @@ function transformElement(x, y, i) {
 }
 
 for(let i = 0; i < mouseOverContainer.length ; i++){
-  mouseOverContainer[i].addEventListener("mouseover", (e)=>{
+  element[i].addEventListener("mouseover", (e)=>{
     window.requestAnimationFrame(function(){
       console.log(e.clientX);
       console.log(e.clientY);
@@ -38,7 +38,7 @@ for(let i = 0; i < mouseOverContainer.length ; i++){
 
 
 
-  mouseOverContainer[i].addEventListener("mouseleave", (e) => {
+  element[i].addEventListener("mouseleave", (e) => {
     window.requestAnimationFrame(function () {
           mouseOverContainer[i].style.transform = "rotateX(0) rotateY(0)";
     });
