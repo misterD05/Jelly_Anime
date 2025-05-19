@@ -34,7 +34,7 @@ body{
     border-radius: 20px;
     backdrop-filter: blur(10px);
     align-items: center;
-    box-shadow: 5px -5px 10px var(--dogwood-rose) inset;
+    box-shadow: 2px -2px 10px var(--dogwood-rose) inset;
     overflow-y: hidden;
     overflow-x: auto;
     position: sticky;
@@ -60,11 +60,12 @@ body{
 }
 
 #logo{
-    text-shadow: -2px 2px 5px var(--dogwood-rose);
+    /*text-shadow: -2px 2px 5px var(--dogwood-rose);*/
+    color: var(--dogwood-rose);
 }
 
 #game{
-    filter: drop-shadow(-2px 2px 5px var(--dogwood-rose))
+    /*filter: drop-shadow(-2px 2px 5px var(--dogwood-rose))*/
 }
 
 a{
@@ -100,16 +101,16 @@ a{
     visibility: visible;
 }
 
-#menuBar:hover #logo{
+#logo:hover{
     text-shadow: -2px 2px 5px var(--jade);
 }
 
-#menuBar:hover #game{
+#game:hover{
     filter: drop-shadow(-2px 2px 5px var(--jade))
 }
 
 #menuBar:hover{
-    box-shadow: 5px -5px 10px var(--jade) inset;
+    box-shadow: 2px -2px 10px var(--jade) inset;
 }
 
 #menuBar:has(#game:hover) #drone{
